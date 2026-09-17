@@ -1,0 +1,227 @@
+/* ============================================================
+   AI HEALTHCARE ASSISTANT
+   GLOBAL STYLES
+   ============================================================ */
+
+
+/* ============================================================
+   MAIN APPLICATION
+   ============================================================ */
+
+.stApp {
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1400px;
+}
+
+
+/* ============================================================
+   HEADINGS
+   ============================================================ */
+
+h1 {
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+}
+
+h2 {
+    font-weight: 750 !important;
+}
+
+h3 {
+    font-weight: 700 !important;
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+section[data-testid="stSidebar"] {
+    border-right: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+section[data-testid="stSidebar"] h1 {
+    font-size: 1.5rem !important;
+}
+
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.health-card {
+    padding: 24px;
+    border-radius: 18px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin-bottom: 18px;
+    transition: transform 0.2s ease;
+}
+
+.health-card:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ============================================================
+   METRIC CARDS
+   ============================================================ */
+
+.metric-card {
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.metric-label {
+    font-size: 0.95rem;
+    opacity: 0.7;
+}
+
+
+/* ============================================================
+   RESULT CARDS
+   ============================================================ */
+
+.result-card {
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin: 12px 0;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.stButton > button {
+    border-radius: 10px;
+    font-weight: 650;
+    padding: 0.55rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   INPUT BOXES
+   ============================================================ */
+
+.stTextInput input,
+.stTextArea textarea,
+.stNumberInput input {
+    border-radius: 10px;
+}
+
+
+/* ============================================================
+   SELECTBOX / MULTISELECT
+   ============================================================ */
+
+.stSelectbox,
+.stMultiSelect {
+    margin-bottom: 10px;
+}
+
+
+/* ============================================================
+   DATAFRAME
+   ============================================================ */
+
+[data-testid="stDataFrame"] {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   ALERTS
+   ============================================================ */
+
+[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+
+/* ============================================================
+   PROGRESS BAR
+   ============================================================ */
+
+.stProgress {
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+
+/* ============================================================
+   DIVIDERS
+   ============================================================ */
+
+hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* ============================================================
+   EXPANDERS
+   ============================================================ */
+
+[data-testid="stExpander"] {
+    border-radius: 12px;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.health-footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    opacity: 0.65;
+    font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   MOBILE RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    .block-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+}
