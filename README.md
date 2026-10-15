@@ -1,197 +1,48 @@
-# 🏥 AI Healthcare Assistant
+# MediMind AI — Healthcare Prediction System
 
-An AI-powered healthcare assistant that combines machine learning,
-medical question retrieval, and healthcare data search into a single
-Streamlit application.
+## Overview
+MediMind AI is a machine learning-based healthcare application designed to support preliminary disease prediction and heart disease risk assessment through an interactive web interface.
 
-## 🚀 Features
+## Features
+- **Disease Prediction:** Predicts possible diseases based on user-selected symptoms.
+- **Heart Risk Assessment:** Estimates heart disease risk using a trained machine learning model.
+- **Doctor Directory:** Displays available doctors and their details.
+- **Appointment Booking:** Allows users to book doctor appointments.
+- **Dashboard:** Displays healthcare and appointment information.
+- **Dark UI:** Provides a modern interface with green-themed text.
 
-### 1. Disease Prediction
-Predicts a possible disease based on selected symptoms.
+## Technologies Used
+- Python
+- Streamlit
+- Scikit-learn
+- Pandas and NumPy
+- Joblib
+- SQLite
+- Machine Learning
 
-- Random Forest Classifier
-- 41 disease classes
-- 132 symptom features
-- Top-3 prediction probabilities
-- Disease description
-- Suggested precautions
-- Feature importance visualization
+## Project Structure
+- `app.py` — Streamlit application
+- `disease_model.pkl` — Trained disease prediction model
+- `disease_label_encoder.pkl` — Disease label encoder
+- `heart_risk_model.pkl` — Heart risk prediction model
+- `heart_risk_scaler.pkl` — Feature scaling model
+- `heart_features.json` — Heart assessment feature information
+- `symptom_columns.json` — Symptom feature information
+- `medical_ai.db` — SQLite database
+- `requirements.txt` — Project dependencies
 
-### 2. Heart Disease Risk Prediction
+## Installation and Setup
+1. Clone the repository.
+2. Install the required packages using `pip install -r requirements.txt`.
+3. Ensure the model files and database are available in the project directory.
+4. Run the application:
 
-Estimates heart disease risk using clinical parameters.
+```bash
+streamlit run app.py
+```
 
-Features include:
+## Disclaimer
+MediMind AI is an educational project and is not a substitute for professional medical advice, diagnosis, or treatment. Prediction results should not be used as the sole basis for healthcare decisions.
 
-- Age
-- Sex
-- Chest pain type
-- Resting blood pressure
-- Cholesterol
-- Resting ECG
-- Maximum heart rate
-- Exercise-induced angina
-- Oldpeak
-- ST slope
-
-Technology:
-
-- Random Forest
-- StandardScaler
-- Probability-based risk output
-
-### 3. Medical Assistant
-
-Provides medical information using a retrieval-based
-question-answering system.
-
-Pipeline:
-
-User Question
-      ↓
-TF-IDF Vectorization
-      ↓
-Cosine Similarity
-      ↓
-Top-K Relevant Medical Questions
-      ↓
-Retrieved Answers
-
-The knowledge base is based on the MedQuAD Q&A dataset.
-
-### 4. Hospitals & Labs Search
-
-Search healthcare facilities from the available healthcare dataset.
-
-Users can search using:
-
-- Hospital/lab name
-- Location
-- City
-- Other available information
-
-### 5. Medicine Search
-
-Search the available medicine dataset.
-
-The application provides information from the dataset
-and does not prescribe medicines.
-
-### 6. Model Analytics
-
-Displays information about:
-
-- Disease model
-- Heart-risk model
-- RAG system
-- Number of features
-- Number of classes
-- Model accuracy
-- ROC-AUC
-- Saved model artifacts
-
----
-
-# 🧠 Machine Learning Architecture
-
-## Disease Prediction
-
-Symptoms
-   ↓
-Feature Vector
-   ↓
-Random Forest
-   ↓
-Disease Probabilities
-   ↓
-Top Predictions
-
-
-## Heart Risk Prediction
-
-Patient Parameters
-   ↓
-Feature Preparation
-   ↓
-StandardScaler
-   ↓
-Random Forest
-   ↓
-Risk Probability
-
-
-## Medical Q&A
-
-User Question
-   ↓
-TF-IDF
-   ↓
-Cosine Similarity
-   ↓
-Top-K Retrieval
-   ↓
-Medical Q&A Results
-
----
-
-# 📁 Project Structure
-
-```text
-AI-Healthcare-Assistant/
-│
-├── notebooks/
-│   └── train_and_test.ipynb
-│
-├── streamlit/
-│   ├── app.py
-│   │
-│   ├── pages/
-│   │   ├── 01_Disease_Prediction.py
-│   │   ├── 02_Heart_Risk.py
-│   │   ├── 03_Medical_Assistant.py
-│   │   ├── 04_Hospitals_Labs.py
-│   │   ├── 05_Medicine_Search.py
-│   │   └── 06_Model_Analytics.py
-│   │
-│   ├── components/
-│   │   ├── cards.py
-│   │   ├── charts.py
-│   │   └── results.py
-│   │
-│   ├── utils/
-│   │   ├── disease_predictor.py
-│   │   ├── heart_predictor.py
-│   │   ├── rag_engine.py
-│   │   ├── data_loader.py
-│   │   ├── hospital_search.py
-│   │   └── medicine_search.py
-│   │
-│   └── assets/
-│       └── styles.css
-│
-├── models/
-│   ├── disease_model.pkl
-│   ├── disease_label_encoder.pkl
-│   ├── symptom_columns.json
-│   ├── symptom_importances.json
-│   ├── heart_risk_model.pkl
-│   ├── heart_risk_scaler.pkl
-│   ├── heart_features.json
-│   ├── rag_tfidf_vectorizer.pkl
-│   ├── rag_tfidf_matrix.pkl
-│   └── training_report.json
-│
-├── data/
-│   ├── disease_symptom_training.csv
-│   ├── disease_symptom_testing.csv
-│   ├── heart_disease_cleveland_303.csv
-│   ├── heart_disease_uci_1190.csv
-│   ├── medquad_qa.csv
-│   ├── symptom_description.csv
-│   ├── symptom_precaution.csv
-│   ├── symptom_severity.csv
-│   ├── india_hospitals_labs.csv
-│   └── india_medicine_data.csv
-│
-├── requirements.txt
-└── README.md
+## Author
+Harsha Prabha V S
